@@ -32,20 +32,20 @@ const navBarConfig: (
 
   {
     id: nanoid(),
-    title: "Tabara",
-    path: "/tabara",
+    title: "Home",
+    path: "/",
   },
 
   {
     id: nanoid(),
-    title: "Anunturi",
+    title: "Postari",
     path: "/posts",
   },
 
   {
     id: nanoid(),
     title: "Despre Noi",
-    path: "/informations/sponsors",
+    path: "/about_us",
   },
   /*recrutare: {
     id: nanoid(),
