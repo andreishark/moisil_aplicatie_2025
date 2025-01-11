@@ -1,9 +1,12 @@
 import Image from "next/image";
 import Liking from "./like-Button";
+import { Button } from "@/components/ui/button";
+import { ModeToggle } from "./theme-changer";
 export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen p-8">
       <header className="flex flex-col items-center gap-4">
+                <ModeToggle/>
         <title>DedSec</title>
         <Image
           src="/next.svg"
@@ -13,6 +16,9 @@ export default function Home() {
           priority
         />
         <h1 className="text-2xl font-bold">Welcome!</h1>
+                <Button>
+
+                </Button>
       </header>
 
       <main className="flex flex-col items-center gap-6 mt-10">
