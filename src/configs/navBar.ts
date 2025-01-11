@@ -8,7 +8,7 @@ const navBarConfig: (
   | navPath
   | { id: string; title: string; paths: otherNavPath[] }
 )[] = [
-  /*ofertaEducationala: {
+  {
     id: nanoid(),
     title: "Oferta Educationala",
     paths: [
@@ -28,7 +28,7 @@ const navBarConfig: (
         route: "/cursuri/curs_electronica",
       },
     ],
-  },*/
+  },
 
   {
     id: nanoid(),
