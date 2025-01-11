@@ -81,7 +81,7 @@ const Navbar = () => {
                           key={objSubPaths.id}
                           title={objSubPaths.title}
                           href={objSubPaths.route}
-                          className="text-secondary hover:bg-transparent bg-transparent hover:text-secondary"
+                          className="text-primary hover:bg-transparent bg-transparent hover:text-primary-foreground"
                         ></ListItem>
                       );
                     })}
@@ -143,7 +143,7 @@ const Navbar = () => {
                           <CollapsibleTrigger>
                             <Button
                               variant="ghost"
-                              className="text-lg text-primary font-medium hover:bg-transparent hover:text-secondary"
+                              className="text-lg text-primary font-medium hover:bg-transparent hover:text-primary-foreground"
                             >
                               {objPath.title}
                             </Button>
@@ -160,7 +160,7 @@ const Navbar = () => {
                                 <NavigationMenuLink
                                   className={cn(
                                     navigationMenuTriggerStyle(),
-                                    "text-primary bg-transparent hover:bg-transparent hover:text-secondary",
+                                    "text-primary bg-transparent hover:bg-transparent hover:text-primary-foreground",
                                   )}
                                 >
                                   {objSubPaths.title}
