@@ -73,7 +73,7 @@ export function DropdownMenuLogin() {
         <Button variant="outline">Join us!</Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-56">
-        <DropdownMenuLabel>More!</DropdownMenuLabel>
+        <DropdownMenuLabel>Welcome new/returning user!</DropdownMenuLabel>
         <DropdownMenuSeparator />
 
         {!isLoggedIn ? (
