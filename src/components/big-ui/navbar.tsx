@@ -1,6 +1,6 @@
 "use client";
 
-import { MenuIcon } from "lucide-react";
+import { ChevronDown, MenuIcon } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
@@ -11,7 +11,7 @@ import {
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuTrigger,
-} from "@radix-ui/react-navigation-menu";
+} from "../ui/navigation-menu";
 import { ListItem, navigationMenuTriggerStyle } from "../ui/navigation-menu";
 import {
   Sheet,
@@ -52,13 +52,14 @@ const Navbar = () => {
             if ("path" in objPath) {
               return (
                 <NavigationMenuItem key={objPath.id}>
-                  <Link href={objPath.path} legacyBehavior passHref>
-                    <NavigationMenuLink className={cn("bg-transparent")}>
-                      <div className="text-lg text-primary font-medium">
-                        {objPath.title}
-                      </div>
-                    </NavigationMenuLink>
-                  </Link>
+                  <NavigationMenuLink
+                    asChild
+                    className={navigationMenuTriggerStyle()}
+                  >
+                    <Link href={objPath.path}>
+                      <div className="text-lg font-medium">{objPath.title}</div>
+                    </Link>
+                  </NavigationMenuLink>
                 </NavigationMenuItem>
               );
             }
@@ -69,19 +70,18 @@ const Navbar = () => {
 
             return (
               <NavigationMenuItem key={objPath.id}>
-                <NavigationMenuTrigger className="text-lg text-primary font-medium">
+                <NavigationMenuTrigger className="text-lg font-medium">
                   {objPath.title}
                 </NavigationMenuTrigger>
 
-                <NavigationMenuContent className="absolute bg-navbar">
-                  <ul className="grid w-auto gap-3 p-4 grid-cols-1">
+                <NavigationMenuContent>
+                  <ul className="grid gap-3 p-4 w-[200px] md:grid-cols-1">
                     {objPath.paths.map((objSubPaths) => {
                       return (
                         <ListItem
                           key={objSubPaths.id}
                           title={objSubPaths.title}
                           href={objSubPaths.route}
-                          className="text-primary hover:bg-transparent bg-transparent hover:text-secondary"
                         ></ListItem>
                       );
                     })}
@@ -96,11 +96,7 @@ const Navbar = () => {
           <div className="flex md:hidden mr-2 items-center gap-2">
             <Sheet>
               <SheetTrigger asChild>
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  className="bg-transparent hover:bg-transparent"
-                >
+                <Button variant="ghost" size="icon">
                   <MenuIcon
                     className="h-5 w-5 rotate-0 scale-100"
                     color={color}
@@ -115,17 +111,14 @@ const Navbar = () => {
                   </SheetTitle>
                 </SheetHeader>
 
-                <NavigationMenu className="pt-2 md:flex items-center gap-10 text-card-foreground list-none">
+                <NavigationMenu className="block pt-2 md:flex items-center gap-10 text-card-foreground list-none">
                   {navBarPaths.map((objPath) => {
                     if ("path" in objPath) {
                       return (
                         <NavigationMenuItem key={objPath.id}>
                           <Link href={objPath.path} legacyBehavior passHref>
                             <NavigationMenuLink
-                              className={cn(
-                                navigationMenuTriggerStyle(),
-                                "bg-transparent hover:bg-transparent",
-                              )}
+                              className={cn(navigationMenuTriggerStyle())}
                             >
                               <div className="text-primary font-medium text-lg">
                                 {objPath.title}
@@ -143,33 +136,41 @@ const Navbar = () => {
                     return (
                       <NavigationMenuItem key={objPath.id}>
                         <Collapsible>
-                          <CollapsibleTrigger asChild>
-                            <Button
-                              variant="ghost"
-                              className="text-lg text-primary font-medium hover:bg-transparent hover:text-primary"
-                            >
+                          <CollapsibleTrigger
+                            className={cn(
+                              navigationMenuTriggerStyle(),
+                              "text-lg font-medium",
+                            )}
+                          >
+                            <div className="flex">
                               {objPath.title}
-                            </Button>
+                              {""}
+                              <ChevronDown
+                                className="relative top-[1px] ml-1 h-3 w-3 transition duration-300 group-data-[state=open]:rotate-180 self-center"
+                                aria-hidden="true"
+                              />
+                            </div>
                           </CollapsibleTrigger>
 
-                          <CollapsibleContent className="pl-2 grid grid-cols-1 CollapsibleContent">
-                            {objPath.paths.map((objSubPaths) => (
-                              <Link
-                                href={objSubPaths.route}
-                                key={objSubPaths.id}
-                                legacyBehavior
-                                passHref
-                              >
+                          <CollapsibleContent className="text-popover-foreground outline-none data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2">
+                            {objPath.paths.map((objSubPaths) => {
+                              return (
                                 <NavigationMenuLink
+                                  key={objSubPaths.id}
+                                  asChild
                                   className={cn(
                                     navigationMenuTriggerStyle(),
-                                    "text-primary bg-transparent hover:bg-transparent hover:text-secondary",
+                                    "w-full",
                                   )}
                                 >
-                                  {objSubPaths.title}
+                                  <Link href={objSubPaths.route}>
+                                    <div className="w-full text-left ml-5">
+                                      {objSubPaths.title}
+                                    </div>
+                                  </Link>
                                 </NavigationMenuLink>
-                              </Link>
-                            ))}
+                              );
+                            })}
                           </CollapsibleContent>
                         </Collapsible>
                       </NavigationMenuItem>
