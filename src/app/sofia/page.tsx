@@ -11,17 +11,17 @@ export const metadata: Metadata = {
 
 export default function Home(){
     return(
-        <div className="grid grid-rows-9 items-center justify-items-stretch min-h-screen px-20 pb-20 gap-12 sm:p-20 font-[family-name:var(--font-arial)]">
+        <div className="grid grid-rows-9 items-center justify-items-center min-h-screen px-20 pb-20 gap-12 sm:p-20 font-[family-name:var(--font-arial)]">
             <h1 className="w-3/5 bg-purple-700 border-solid border-2 border-purple-500 rounded text-center text-lg italic font-medium">Hello</h1>
             
-            <Input className="w-96" placeholder="Enter your email"/>
+            <Input className="w-1/3" placeholder="Enter your email"/>
 
-            <div className="flex flex-row items-stretch grow h-16 gap-x-0 ">
-                <div className = "bg-indigo-500 border-dashed hover:border-solid border-4 border-slate-700 rounded-full text-center text-xl font-extrabold basis-1/3 hover:basis-1/2">
+            <div className="flex flex-row items-stretch grow h-16 w-4/5 gap-x-0">
+                <div className = "pt-3 bg-indigo-500 border-dashed hover:border-solid border-4 border-slate-700 rounded-full text-center text-xl font-extrabold basis-1/3 hover:basis-1/2">
                     Option A</div>
-                <div className = "bg-violet-700 border-dashed hover:border-solid border-4 border-slate-700 rounded-full text-center text-xl font-extrabold basis-1/3 hover:basis-1/2">
+                <div className = "pt-3 bg-violet-700 border-dashed hover:border-solid border-4 border-slate-700 rounded-full text-center text-xl font-extrabold basis-1/3 hover:basis-1/2">
                     Option B</div>
-                <div className = "bg-fuchsia-600 border-dashed hover:border-solid border-4 border-slate-700 rounded-full text-center text-xl font-extrabold basis-1/3 hover:basis-1/2">
+                <div className = "pt-3 bg-fuchsia-600 border-dashed hover:border-solid border-4 border-slate-700 rounded-full text-center text-xl font-extrabold basis-1/3 hover:basis-1/2">
                     Option C</div>
             </div>
             
