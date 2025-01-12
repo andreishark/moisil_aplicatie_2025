@@ -2,8 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
 import { Metadata } from "next";
-import { Input } from "@/components/ui/input"
-
+import { Input } from "@/components/ui/input";
+import { DropdownMenuRadioGroupDemo } from "./menu";
 
 export const metadata: Metadata = {
     title:"Sofia's page"
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function Home(){
     return(
         <div className="grid grid-rows-9 items-center justify-items-center min-h-screen px-20 pb-20 gap-12 sm:p-20 font-[family-name:var(--font-arial)]">
-            <h1 className="w-3/5 bg-purple-700 border-solid border-2 border-purple-500 rounded text-center text-lg italic font-medium">Hello</h1>
+            <h1 className="w-3/5 bg-purple-700 border-solid border-2 border-purple-500 rounded text-center text-xl italic font-medium">Hello</h1>
             
             <Input className="w-1/3" placeholder="Enter your email"/>
 
@@ -24,14 +24,6 @@ export default function Home(){
                 <div className = "pt-3 bg-fuchsia-600 border-dashed hover:border-solid border-4 border-slate-700 rounded-full text-center text-xl font-extrabold basis-1/3 hover:basis-1/2">
                     Option C</div>
             </div>
-            
-            <Image
-                className="dark:invert"
-                src="/globe.svg"
-                alt="Globe icon"
-                width={100}
-                height={100}
-            />
             
             <p>This was made by <b>Sofia</b></p>
             
@@ -48,8 +40,10 @@ export default function Home(){
                       width={30}
                       height={30}
                     />
-            Begin your journey
+            Search wiki
             </Link>
+
+            <DropdownMenuRadioGroupDemo/>
 
         </div>
     );
