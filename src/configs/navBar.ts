@@ -8,7 +8,7 @@ const navBarConfig: (
   | navPath
   | { id: string; title: string; paths: otherNavPath[] }
 )[] = [
-     {
+  {
     id: nanoid(),
     title: "Oferta Educationala",
     paths: [

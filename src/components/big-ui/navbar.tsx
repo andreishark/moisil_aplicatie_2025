@@ -1,6 +1,6 @@
 "use client";
 
-import { Menu } from "lucide-react";
+import { MenuIcon } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
@@ -81,7 +81,7 @@ const Navbar = () => {
                           key={objSubPaths.id}
                           title={objSubPaths.title}
                           href={objSubPaths.route}
-                          className="text-secondary hover:bg-transparent bg-transparent hover:text-secondary"
+                          className="text-primary hover:bg-transparent bg-transparent hover:text-secondary"
                         ></ListItem>
                       );
                     })}
@@ -101,7 +101,10 @@ const Navbar = () => {
                   size="icon"
                   className="bg-transparent hover:bg-transparent"
                 >
-                  <Menu className="h-5 w-5 rotate-0 scale-100" color={color} />
+                  <MenuIcon
+                    className="h-5 w-5 rotate-0 scale-100"
+                    color={color}
+                  />
                 </Button>
               </SheetTrigger>
 
@@ -140,10 +143,10 @@ const Navbar = () => {
                     return (
                       <NavigationMenuItem key={objPath.id}>
                         <Collapsible>
-                          <CollapsibleTrigger>
+                          <CollapsibleTrigger asChild>
                             <Button
                               variant="ghost"
-                              className="text-lg text-primary font-medium hover:bg-transparent hover:text-secondary"
+                              className="text-lg text-primary font-medium hover:bg-transparent hover:text-primary"
                             >
                               {objPath.title}
                             </Button>
