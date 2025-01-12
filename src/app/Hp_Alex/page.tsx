@@ -18,6 +18,7 @@ export default function home()
         <CarouselStart/>
       </main>
       <footer>
+        <br/>
         <DropdownMenuLogin/>
       </footer>
     </div>

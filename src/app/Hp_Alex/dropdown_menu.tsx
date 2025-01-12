@@ -1,5 +1,4 @@
 'use client'
-
 import React, { useState } from "react";
 import { UserPlus, LogIn, LogOut } from "lucide-react";
 
@@ -47,6 +46,8 @@ export function DropdownMenuLogin() {
     if (Object.values(formData).every((value) => value.trim() !== "")) {
       setIsLoggedIn(true);
       alert("Successfully signed up!");
+    } else {
+      alert("Please fill all the Sign-up fields!");
     }
   };
 
@@ -54,6 +55,8 @@ export function DropdownMenuLogin() {
     if (Object.values(loginData).every((value) => value.trim() !== "")) {
       setIsLoggedIn(true);
       alert("Successfully logged in!");
+    } else {
+      alert("Please fill all the Log-in fields!");
     }
   };
 
@@ -70,7 +73,7 @@ export function DropdownMenuLogin() {
         <Button variant="outline">Join us!</Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-56">
-        <DropdownMenuLabel>More!</DropdownMenuLabel>
+        <DropdownMenuLabel>Welcome new/returning user!</DropdownMenuLabel>
         <DropdownMenuSeparator />
 
         {!isLoggedIn ? (
