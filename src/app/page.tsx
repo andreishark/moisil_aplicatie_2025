@@ -1,4 +1,3 @@
-import Footer from "@/components/big-ui/footer";
 import Image from "next/image";
 
 export default function Home() {
