@@ -36,11 +36,11 @@ export default function Home(){
             <p>This was made by <b>Sofia</b></p>
             
             <Link
-                    className={buttonVariants({variant: "default", size: "lg"})}
-                    href="https://www.wikipedia.org/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                className={buttonVariants({variant: "default", size: "lg"})}
+                href="https://www.wikipedia.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                     <Image
                       className="dark:invert"
                       src="/vercel.svg"
