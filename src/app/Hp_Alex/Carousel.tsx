@@ -13,10 +13,11 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import Liking from "./Like-button";
 
 export function CarouselStart() {
   // Array of custom strings for the carousel slides
-  const customTextArray = ["Bine ati venit pe pagina noastra web! Suntem foarte bucurosi!", "Slide Two", "Slide Three", "Slide Four", "Slide Five"];
+  const customTextArray = ["Bine ati venit pe pagina noastra web! Suntem foarte bucurosi!", "Slide Two", "Slide Three", "Slide Four", <Liking/>];
   const plugin = React.useRef(
     Autoplay({ delay: 2000, stopOnInteraction: true })
   )
