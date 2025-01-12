@@ -1,5 +1,6 @@
 import { Metadata } from "next"
 import { CarouselStart } from "./Carousel"
+import { DropdownMenuLogin } from "./dropdown_menu"
 
 
 export const metadata: Metadata = {
@@ -16,6 +17,9 @@ export default function home()
       <main className="flex flex-col items-center gap-6 mt-10">
         <CarouselStart/>
       </main>
+      <footer>
+        <DropdownMenuLogin/>
+      </footer>
     </div>
   )
 }
