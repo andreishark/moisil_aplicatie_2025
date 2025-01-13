@@ -7,3 +7,4 @@ Next.Js - https://nextjs.org/learn-pages-router/basics/assets-metadata-css/styli
 ShadCN - https://ui.shadcn.com/
 
 Tailwind CSS - https://tailwindcss.com/
+
