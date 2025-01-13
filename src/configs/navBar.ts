@@ -10,26 +10,9 @@ const navBarConfig: (
 )[] = [
   {
     id: nanoid(),
-    title: "Oferta Educationala",
-    paths: [
-      {
-        id: nanoid(),
-        title: "Curs Robotica",
-        route: "/cursuri/curs_robotica",
-      },
-      {
-        id: nanoid(),
-        title: "Curs CNC",
-        route: "/cursuri/curs_cnc",
-      },
-      {
-        id: nanoid(),
-        title: "Curs Electronica",
-        route: "/cursuri/curs_electronica",
-      },
-    ],
+    title: "Hartă",
+    path: "/Map"
   },
-
   {
     id: nanoid(),
     title: "Home",
@@ -39,13 +22,13 @@ const navBarConfig: (
   {
     id: nanoid(),
     title: "Postari",
-    path: "/posts",
+    path: "/Forum",
   },
 
   {
     id: nanoid(),
-    title: "Despre Noi",
-    path: "/about_us",
+    title: "Agenții de ajutor",
+    path: "/compilation",
   },
   /*recrutare: {
     id: nanoid(),
