@@ -1,10 +1,25 @@
 'use client'
 
-import { useState } from "react";
+import { useState, FormEvent } from "react";
+
+interface Message {
+  username: string;
+  text: string;
+}
 
 export default function Chatroom() {
-  const [username, setUsername] = useState("");
-  const [message, setMessage] = useState("");
+  const [username, setUsername] = useState<string>("");  // Store the username
+  const [message, setMessage] = useState<string>("");    // Store the current message
+  const [messages, setMessages] = useState<Message[]>([]);  // Store the list of messages with correct type
+
+  const handleSendMessage = (e: FormEvent) => {
+    e.preventDefault();
+    if (username.trim() && message.trim()) {
+      // Add the new message to the messages array
+      setMessages([...messages, { username, text: message }]);
+      setMessage("");  // Clear the message input after sending
+    }
+  };
 
   return (
     <div className="flex h-screen flex-col">
@@ -12,8 +27,15 @@ export default function Chatroom() {
         <h1 className="text-xl font-semibold">Chatroom</h1>
       </header>
 
-      <main className="flex-1 overflow-y-auto p-6">
-        {/* Chat content will go here */}
+      <main className="flex-1 overflow-y-auto p-6 space-y-4">
+        {/* Display all the messages */}
+        <div className="space-y-2">
+          {messages.map((msg, index) => (
+            <div key={index} className="text-sm">
+              <p className="font-semibold">{msg.username} - <span className="font-normal">{msg.text}</span></p>
+            </div>
+          ))}
+        </div>
       </main>
 
       <footer className="bg-gray-100 p-4 flex flex-col items-start space-y-4">
@@ -47,6 +69,7 @@ export default function Chatroom() {
 
           {/* Send Button */}
           <button
+            onClick={handleSendMessage}
             className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700"
             disabled={!username.trim() || !message.trim()} // Disable if username or message is empty
           >
