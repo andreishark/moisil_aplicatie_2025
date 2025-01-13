@@ -66,7 +66,7 @@ export function Component() {
               dataKey="desktop"
               type="natural"
               stroke="var(--color-desktop)"
-              strokeWidth={2}
+              strokeWidth={4}
               dot={false}
             />
           </LineChart>
