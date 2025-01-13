@@ -3,16 +3,27 @@ import { FacebookIcon } from "lucide-react";
 import { InstagramIcon } from "lucide-react";
 import { YoutubeIcon } from "lucide-react";
 import { Button } from "../ui/button";
-import TiktokIcon from "../ui/icons/tiktok";
 import NormalLink from "../ui/normal-link";
 
 const Copyright = () => {
   return (
     <div className="flex flex-col items-center">
-      <p className="text-primary">
+      <p>
         {"Copyright ©"}
-        <NormalLink href="https://dwk.ro/?page=Home&lang=RO">
-          DWK
+        <NormalLink href="https://github.com/andreishark">
+          Andrei
+        </NormalLink>{" "}
+      </p>
+      <p>
+      {"Copyright ©"}
+        <NormalLink href="https://github.com/BlueskyBV">
+          Alexandru
+        </NormalLink>{" "}
+      </p>
+      <p>
+      {"Copyright ©"}
+        <NormalLink href="https://github.com/warlockina">
+          Sofia
         </NormalLink>{" "}
         {new Date().getFullYear()}
       </p>
@@ -31,7 +42,7 @@ const ContactInfo = () => {
       <div className="flex flex-col items-start">
         <p>
           Email:{" "}
-          <NormalLink href="mailto:office@minitechnicus.org">
+          <NormalLink href="mailto:andrei.varlan@saguna.ro">
             andrei.varlan@saguna.ro
           </NormalLink>
         </p>
