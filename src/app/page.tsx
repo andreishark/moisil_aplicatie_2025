@@ -18,7 +18,7 @@ export default function Home() {
               fill={true}
               className="pt-[6rem]"
             />
-          <h1 className="mt-24 mb-36 bg-clip-border border-slate-300 rounded-xl p-2 bg-gradient-to-r from-teal-500 to-indigo-600 text-5xl text-center font-semibold z-10 drop-shadow-2xl">
+          <h1 className="mt-24 mb-36 bg-clip-border border-slate-300 rounded-xl p-2 bg-gradient-to-r from-teal-500 to-indigo-600 text-5xl text-white text-center font-semibold z-10 drop-shadow-2xl">
             Poți face o schimbare.</h1>
           </div>
         
@@ -27,8 +27,8 @@ export default function Home() {
           >Poză: Nasa - Earth Observation </Link>
         
           <article className="mt-28 mx-24 z-10 bg-slate-700 p-5">
-          <h2 className="text-xl font-semibold mb-2">Pentru o planetă mai sănătoasă</h2>
-          <p className="text-wrap indent-4">
+          <h2 className="text-xl text-white font-semibold mb-2">Pentru o planetă mai sănătoasă</h2>
+          <p className="text-wrap text-white indent-4">
             Resursele naturale sunt fundația vieții de pe Pământ, formând ecosisteme, alimentându-ne casele și industriile. 
             Aceste resurse - apă, pământ, minerale și păduri - sunt finite și de neînlocuit. 
             Economisirea este crucială pentru prezervarea acestora pe termen lung. Așa ne putem proteja planeta în timp ce construim un viitor mai sustenabil. 
@@ -37,10 +37,13 @@ export default function Home() {
           </article>
 
           <Link className="bg-sky-500 hover:bg-sky-700 p-4 inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0"
-            href="./compilation/page" >
-            Mai multe detalii
+            href="./compilation" >
+            Companii ce promovează economisirea resurselor:
           </Link>
-
+          <Link className="bg-teal-500 hover:bg-teal-700 p-4 inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0"
+            href="./Forum" >
+            Forum:
+          </Link>
         </div>
   );
 }
