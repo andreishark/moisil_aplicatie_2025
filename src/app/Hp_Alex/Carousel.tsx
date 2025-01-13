@@ -3,8 +3,6 @@
 import * as React from "react";
 import Autoplay from 'embla-carousel-autoplay'
 
-
-
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Carousel,
@@ -14,10 +12,11 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import Liking from "./Like-button";
+import { AccordionStart } from "./Accordion";
 
 export function CarouselStart() {
   // Array of custom strings for the carousel slides
-  const customTextArray = ["Bine ati venit pe pagina noastra web! Suntem foarte bucurosi!", "Slide Two", "Slide Three", "Slide Four", <Liking/>];
+  const customTextArray = ["Bine ati venit pe pagina noastra web! Suntem foarte bucurosi!", "Slide Two", <AccordionStart/>, "Slide Four", <Liking/>];
   const plugin = React.useRef(
     Autoplay({ delay: 2000, stopOnInteraction: true })
   )
