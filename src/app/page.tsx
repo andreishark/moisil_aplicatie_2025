@@ -3,7 +3,8 @@ import Link from "next/link";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Salvăm resursele naturale"
+  title: "Salvăm resursele naturale",
+  description: ""
 }
 
 export default function Home() {
@@ -24,7 +25,7 @@ export default function Home() {
         
           <Link className="text-sm underline justify-self-start text-slate-300 z-10"
               href="https://images.nasa.gov/details/iss036e005964"
-          >Poză: Nasa - Earth Observation </Link>
+          >Imagine: Nasa - Earth Observation </Link>
         
           <article className="mt-28 mx-24 z-10 bg-slate-700 p-5">
           <h2 className="text-xl text-white font-semibold mb-2">Pentru o planetă mai sănătoasă</h2>
@@ -36,18 +37,13 @@ export default function Home() {
             </p>
           </article>
 
-          <Link className="bg-violet-500 hover:bg-violet-700 p-4 inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0"
+          <Link className="text-white bg-teal-500 hover:bg-teal-700 p-4 inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0"
             href="./compilation" >
             Companii ce promovează economisirea resurselor:
           </Link>
           
-          <Link className="bg-blue-500 hover:bg-blue-700 p-4 inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0"
-            href="./Forum" >
-            Forum - vorbește cu alții!
-          </Link>
-
-          <Link className="bg-cyan-500 hover:bg-cyan-700 p-4 inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0"
-            href="./Alex">
+          <Link className="text-white bg-indigo-500 hover:bg-indigo-700 p-4 inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0"
+            href="./Map">
             Harta consumului și economisirii de resurse naturale:
           </Link>
         </div>
