@@ -1,27 +1,24 @@
-import { Metadata } from "next"
-import { CarouselStart } from "./Carousel"
-import { DropdownMenuLogin } from "./dropdown_menu"
-import Liking from "./Like-button"
-
+import { Metadata } from "next";
+import { CarouselStart } from "./Carousel";
+import { DropdownMenuLogin } from "./dropdown_menu";
 
 export const metadata: Metadata = {
   title: "About us!",
-  description: "This is DedSec!"
-}
+  description: "This is DedSec!",
+};
 
-export default function home()
-{
+export default function home() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen p-8 text-primary">
-      <header>
-      </header>
+      <header></header>
       <main className="flex flex-col items-center gap-6 mt-10">
-        <CarouselStart/>
+        <CarouselStart />
       </main>
       <footer>
-        <br/>
-        <DropdownMenuLogin/>
+        <br />
+        <DropdownMenuLogin />
       </footer>
     </div>
-  )
+  );
 }
+

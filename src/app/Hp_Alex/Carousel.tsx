@@ -1,7 +1,7 @@
-'use client'
+"use client";
 
 import * as React from "react";
-import Autoplay from 'embla-carousel-autoplay'
+import Autoplay from "embla-carousel-autoplay";
 
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -16,15 +16,24 @@ import { AccordionStart } from "./Accordion";
 
 export function CarouselStart() {
   // Array of custom strings for the carousel slides
-  const customTextArray = ["Bine ati venit pe pagina noastra web! Suntem foarte bucurosi!", "Slide Two", <AccordionStart/>, "Slide Four", <Liking/>];
+  const customTextArray = [
+    "Bine ati venit pe pagina noastra web! Suntem foarte bucurosi!",
+    "Slide Two",
+    "Slide Three",
+    "Slide Four",
+    <Liking key={4} />,
+  ];
   const plugin = React.useRef(
-    Autoplay({ delay: 2000, stopOnInteraction: true })
-  )
+    Autoplay({ delay: 2000, stopOnInteraction: true }),
+  );
 
   return (
-    <Carousel className="w-full max-w-lg"       plugins={[plugin.current]}
-    onMouseEnter={plugin.current.stop}
-    onMouseLeave={() => plugin.current.play()}>
+    <Carousel
+      className="w-full max-w-lg"
+      plugins={[plugin.current]}
+      onMouseEnter={plugin.current.stop}
+      onMouseLeave={() => plugin.current.play()}
+    >
       <CarouselContent>
         {customTextArray.map((text, index) => (
           <CarouselItem key={index}>
@@ -44,3 +53,4 @@ export function CarouselStart() {
     </Carousel>
   );
 }
+
