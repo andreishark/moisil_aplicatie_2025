@@ -12,8 +12,7 @@ export default function TooltipMap() {
     <div>
       <MapUI setTooltipContent={setContent} />
       <Tooltip id="map-tooltip">
-        <Component/>
-        {content}
+        <Component content={content}/>
       </Tooltip>
     </div>
   );

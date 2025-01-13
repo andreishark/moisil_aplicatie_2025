@@ -33,11 +33,11 @@ const chartConfig = {
   },
 } satisfies ChartConfig
 
-export function Component() {
+export function Component({ content }: { content: string }) {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Line Chart</CardTitle>
+        <CardTitle>{content}</CardTitle>
         <CardDescription>January - June 2024</CardDescription>
       </CardHeader>
       <CardContent>
