@@ -19,7 +19,7 @@ export function CarouselStart() {
   const customTextArray = [
     "Bine ati venit pe pagina noastra web! Suntem foarte bucurosi!",
     "Slide Two",
-    "Slide Three",
+    "Slide three",
     "Slide Four",
     <Liking key={4} />,
   ];
