@@ -11,7 +11,7 @@ const navBarConfig: (
   {
     id: nanoid(),
     title: "Hartă",
-    path: "/Map"
+    path: "/Map",
   },
   {
     id: nanoid(),
@@ -19,11 +19,11 @@ const navBarConfig: (
     path: "/",
   },
 
-  {
-    id: nanoid(),
-    title: "Postari",
-    path: "/Forum",
-  },
+  // {
+  //   id: nanoid(),
+  //   title: "Postari",
+  //   path: "/Forum",
+  // },
 
   {
     id: nanoid(),
