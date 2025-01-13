@@ -18,7 +18,7 @@ export default function Home() {
               fill={true}
               className="pt-[6rem]"
             />
-          <h1 className="mt-24 mb-36 bg-clip-border border-slate-300 rounded-xl p-2 bg-gradient-to-r from-teal-500 to-indigo-600 text-5xl text-white text-center font-semibold z-10 drop-shadow-2xl">
+          <h1 className="my-36 bg-clip-border border-slate-300 rounded-xl p-2 bg-gradient-to-r from-teal-500 to-indigo-600 text-5xl text-white text-center font-semibold z-10 drop-shadow-2xl">
             Poți face o schimbare.</h1>
           </div>
         
@@ -36,13 +36,19 @@ export default function Home() {
             </p>
           </article>
 
-          <Link className="bg-sky-500 hover:bg-sky-700 p-4 inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0"
+          <Link className="bg-violet-500 hover:bg-violet-700 p-4 inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0"
             href="./compilation" >
             Companii ce promovează economisirea resurselor:
           </Link>
-          <Link className="bg-teal-500 hover:bg-teal-700 p-4 inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0"
+          
+          <Link className="bg-blue-500 hover:bg-blue-700 p-4 inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0"
             href="./Forum" >
-            Forum:
+            Forum - vorbește cu alții!
+          </Link>
+
+          <Link className="bg-cyan-500 hover:bg-cyan-700 p-4 inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0"
+            href="./Alex">
+            Harta consumului și economisirii de resurse naturale:
           </Link>
         </div>
   );
