@@ -12,7 +12,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import Liking from "./Like-button";
-import { AccordionStart } from "./Accordion";
+// import { AccordionStart } from "./Accordion";
 
 export function CarouselStart() {
   // Array of custom strings for the carousel slides
