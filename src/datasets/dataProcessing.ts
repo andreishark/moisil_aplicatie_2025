@@ -142,7 +142,10 @@ parse(
 
 export function getForestPercentPerYear() {
   const perYear = results
-    .filter((val) => val["Indicator Name"] == "Forest area (% of land area)")
+    .filter(
+      (val) =>
+        val["Indicator Name"] == "Fossil fuel energy consumption (% of total)",
+    )
     .map((val) => {
       return {
         countryCode: val["Country Code"],
@@ -150,7 +153,7 @@ export function getForestPercentPerYear() {
       };
     });
 
-  fs.writeFile("forests_percent.json", JSON.stringify(perYear), (err) => {});
+  fs.writeFile("fuel.json", JSON.stringify(perYear), (err) => {});
 
   return perYear;
 }
