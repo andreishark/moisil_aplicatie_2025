@@ -3,7 +3,6 @@ import { FacebookIcon } from "lucide-react";
 import { InstagramIcon } from "lucide-react";
 import { YoutubeIcon } from "lucide-react";
 import { Button } from "../ui/button";
-import TiktokIcon from "../ui/icons/tiktok";
 import NormalLink from "../ui/normal-link";
 
 const Copyright = () => {
