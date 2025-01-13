@@ -15,7 +15,7 @@ import {
             {content}
             <br/>
             <br/>
-            <Link className="text-blue-600" href={link}>Link to their page!</Link>
+            <Link className="text-blue-600" href={link}>Link către pagina lor!</Link>
           </AccordionContent>
         </AccordionItem>
     </Accordion>
