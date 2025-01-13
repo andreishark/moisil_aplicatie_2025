@@ -32,7 +32,7 @@ const ContactInfo = () => {
         <p>
           Email:{" "}
           <NormalLink href="mailto:office@minitechnicus.org">
-            office@minitechnicus.org
+            andrei.varlan@saguna.ro
           </NormalLink>
         </p>
         {/* <p> */}
@@ -62,11 +62,6 @@ const SocialMedia = () => {
       <Button variant="ghost" size="icon" asChild>
         <Link href="https://youtube.com/@mini.technicus?si=53Ni5Ua6n4YlKcSI">
           <YoutubeIcon />
-        </Link>
-      </Button>
-      <Button variant="ghost" size="icon" asChild>
-        <Link href="https://www.tiktok.com/@mini.technicus?_t=8qHsQ64FnWK&_r=1">
-          <TiktokIcon />
         </Link>
       </Button>
     </div>

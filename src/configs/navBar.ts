@@ -11,7 +11,7 @@ const navBarConfig: (
   {
     id: nanoid(),
     title: "Hartă",
-    path: "/Alex"
+    path: "/Map"
   },
   {
     id: nanoid(),
