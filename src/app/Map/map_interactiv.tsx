@@ -9,10 +9,12 @@ export default function MapInteractiv() {
 
   return (
     <div>
-      <h1>
-        <DropdownMenuDemo message={selection} setMessage={setSelection} />
-      </h1>
-      <main className="p-20">
+      <div className="flex justify-center align-middle">
+        <h1>
+          <DropdownMenuDemo message={selection} setMessage={setSelection} />
+        </h1>
+      </div>
+      <main>
         <TooltipMap selection={selection} />
       </main>
     </div>
