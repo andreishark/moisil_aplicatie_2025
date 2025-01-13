@@ -18,7 +18,7 @@ export default function Home() {
               fill={true}
               className="pt-[6rem]"
             />
-          <h1 className="mt-24 mb-36 bg-clip-border border-slate-300 rounded-xl p-2 bg-gradient-to-r from-teal-500 to-indigo-600 text-5xl text-white text-center font-semibold z-10 drop-shadow-2xl">
+          <h1 className="my-36 bg-clip-border border-slate-300 rounded-xl p-2 bg-gradient-to-r from-teal-500 to-indigo-600 text-5xl text-white text-center font-semibold z-10 drop-shadow-2xl">
             Poți face o schimbare.</h1>
           </div>
         
