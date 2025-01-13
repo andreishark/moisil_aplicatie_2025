@@ -3,6 +3,7 @@
 import { useState } from "react";
 import MapUI from "../ui/map";
 import { Tooltip } from "react-tooltip";
+import { Component } from "./chart";
 
 export default function TooltipMap() {
   const [content, setContent] = useState("");
@@ -10,7 +11,9 @@ export default function TooltipMap() {
   return (
     <div>
       <MapUI setTooltipContent={setContent} />
-      <Tooltip id="map-tooltip">{content}</Tooltip>
+      <Tooltip id="map-tooltip">
+        <Component content={content}/>
+      </Tooltip>
     </div>
   );
 }
