@@ -1,20 +1,23 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Salvăm resursele naturale"
+}
 
 export default function Home() {
   // console.log(getForestPercentPerYear());
 
   return (
-      <div className="grid grid-flow-row items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-
-        <div className="grid grid-flow-row items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+        <div className="grid grid-flow-row items-center justify-items-center min-h-screen p-8 pb-20 gap-16 font-[family-name:var(--font-geist-sans)]">
           <div>
             <Image
               src="/nasa-earth.jpg"
               alt="Earth photo"
               fill={true}
             />
-          <h1 className="mt-24 mb-36 bg-clip-border border-slate-300 rounded-xl p-2 bg-gradient-to-r from-teal-500 to-indigo-600 text-6xl text-center font-semibold z-10 drop-shadow-2xl">
+          <h1 className="mt-24 mb-36 bg-clip-border border-slate-300 rounded-xl p-2 bg-gradient-to-r from-teal-500 to-indigo-600 text-5xl text-center font-semibold z-10 drop-shadow-2xl">
             Poți face o schimbare.</h1>
           </div>
         
@@ -32,7 +35,11 @@ export default function Home() {
             </p>
           </article>
 
+          <Link className="bg-sky-500 hover:bg-sky-700 p-4 inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0"
+            href="./compilation/page" >
+            Mai multe detalii
+          </Link>
+
         </div>
-      </div>
   );
 }
