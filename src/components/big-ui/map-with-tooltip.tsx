@@ -7,14 +7,14 @@ import { Component } from "./chart";
 
 export default function TooltipMap() {
   const [content, setContent] = useState("");
+  const [countryCode, setCountryCode] = useState("");
 
   return (
     <div>
-      <MapUI setTooltipContent={setContent} />
+      <MapUI setTooltipContent={setContent} setCountryCode={setCountryCode} />
       <Tooltip id="map-tooltip">
-        <Component content={content}/>
+        <Component content={content} countryCode={countryCode} />
       </Tooltip>
     </div>
   );
 }
-

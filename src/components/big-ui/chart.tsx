@@ -1,7 +1,8 @@
-"use client"
+"use client";
 
-import { TrendingUp } from "lucide-react"
-import { CartesianGrid, Line, LineChart, XAxis } from "recharts"
+import { TrendingUp } from "lucide-react";
+import { CartesianGrid, Line, LineChart, XAxis } from "recharts";
+import forest_data from "@/datasets/forests_percent.json";
 
 import {
   Card,
@@ -10,30 +11,43 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card"
+} from "@/components/ui/card";
 import {
   ChartConfig,
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-} from "@/components/ui/chart"
-const chartData = [
-  { month: "January", desktop: 186 },
-  { month: "February", desktop: 305 },
-  { month: "March", desktop: 237 },
-  { month: "April", desktop: 73 },
-  { month: "May", desktop: 209 },
-  { month: "June", desktop: 214 },
-]
+} from "@/components/ui/chart";
+const chartDataWithCountry = forest_data.map((val) => {
+  const yearData = [];
+  for (let index = 1960; index <= 2021; index++) {
+    yearData.push({
+      year: index,
+      desktop:
+        val.data[index - 1960] == "" ? 0 : parseFloat(val.data[index - 1960]),
+    });
+  }
+
+  return {
+    countryCode: val.countryCode,
+    data: yearData,
+  };
+});
 
 const chartConfig = {
   desktop: {
-    label: "Desktop",
+    label: "Year",
     color: "hsl(var(--chart-1))",
   },
-} satisfies ChartConfig
+} satisfies ChartConfig;
 
-export function Component({ content }: { content: string }) {
+export function Component({
+  content,
+  countryCode,
+}: {
+  content: string;
+  countryCode: string;
+}) {
   return (
     <Card>
       <CardHeader>
@@ -44,7 +58,10 @@ export function Component({ content }: { content: string }) {
         <ChartContainer config={chartConfig}>
           <LineChart
             accessibilityLayer
-            data={chartData}
+            data={
+              chartDataWithCountry.find((val) => val.countryCode == countryCode)
+                ?.data
+            }
             margin={{
               left: 12,
               right: 12,
@@ -72,14 +89,6 @@ export function Component({ content }: { content: string }) {
           </LineChart>
         </ChartContainer>
       </CardContent>
-      <CardFooter className="flex-col items-start gap-2 text-sm">
-        <div className="flex gap-2 font-medium leading-none">
-          Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
-        </div>
-        <div className="leading-none text-muted-foreground">
-          Showing total visitors for the last 6 months
-        </div>
-      </CardFooter>
     </Card>
-  )
+  );
 }

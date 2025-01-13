@@ -8,8 +8,10 @@ import {
 
 export default function MapUI({
   setTooltipContent,
+  setCountryCode,
 }: {
   setTooltipContent: (message: string) => void;
+  setCountryCode: (countryCode: string) => void;
 }) {
   return (
     <div data-tooltip-content="">
@@ -24,6 +26,7 @@ export default function MapUI({
                   geography={geo}
                   onMouseEnter={() => {
                     setTooltipContent(`${geo.properties.name}`);
+                    setCountryCode(geo.id);
                     console.log(`${geo.properties.name}`);
                   }}
                   onMouseLeave={() => {
@@ -52,4 +55,3 @@ export default function MapUI({
     </div>
   );
 }
-
