@@ -1,54 +1,51 @@
 import Image from "next/image";
+import Link from "next/link";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Salvăm resursele naturale",
+  description: ""
+}
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="text-lg">Save and see your changes instantly.</li>
-        </ol>
+  // console.log(getForestPercentPerYear());
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+  return (
+        <div className="grid grid-flow-row items-center justify-items-center min-h-screen p-8 pb-20 gap-16 font-[family-name:var(--font-geist-sans)]">
+          <div>
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+              src="/nasa-earth.jpg"
+              alt="Earth photo"
+              fill={true}
+              className="pt-[6rem]"
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          <h1 className="my-36 bg-clip-border border-slate-300 rounded-xl p-2 bg-gradient-to-r from-teal-500 to-indigo-600 text-5xl text-white text-center font-semibold z-10 drop-shadow-2xl">
+            Poți face o schimbare.</h1>
+          </div>
+        
+          <Link className="text-sm underline justify-self-start text-slate-300 z-10"
+              href="https://images.nasa.gov/details/iss036e005964"
+          >Imagine: Nasa - Earth Observation </Link>
+        
+          <article className="mt-28 mx-24 z-10 bg-slate-700 p-5">
+          <h2 className="text-xl text-white font-semibold mb-2">Pentru o planetă mai sănătoasă</h2>
+          <p className="text-wrap text-white indent-4">
+            Resursele naturale sunt fundația vieții de pe Pământ, formând ecosisteme, alimentându-ne casele și industriile. 
+            Aceste resurse - apă, pământ, minerale și păduri - sunt finite și de neînlocuit. 
+            Economisirea este crucială pentru prezervarea acestora pe termen lung. Așa ne putem proteja planeta în timp ce construim un viitor mai sustenabil. 
+            Cele mai importante resurse merită cea mai mare grijă a noastră. Fă o diferență.
+            </p>
+          </article>
+
+          <Link className="text-white bg-teal-500 hover:bg-teal-700 p-4 inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0"
+            href="./compilation" >
+            Companii ce promovează economisirea resurselor:
+          </Link>
+          
+          <Link className="text-white bg-indigo-500 hover:bg-indigo-700 p-4 inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0"
+            href="./Map">
+            Harta consumului și economisirii de resurse naturale:
+          </Link>
         </div>
-      </main>
-    </div>
   );
 }

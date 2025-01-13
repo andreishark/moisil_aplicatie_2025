@@ -39,6 +39,7 @@ export default function RootLayout({
           <header>
             <Navbar />
           </header>
+          <div className="h-10"></div>
           {children}
           <div className="w-0 h-0 dark"></div>
           <footer className="w-full px-10">

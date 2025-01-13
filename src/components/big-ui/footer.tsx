@@ -3,16 +3,27 @@ import { FacebookIcon } from "lucide-react";
 import { InstagramIcon } from "lucide-react";
 import { YoutubeIcon } from "lucide-react";
 import { Button } from "../ui/button";
-import TiktokIcon from "../ui/icons/tiktok";
 import NormalLink from "../ui/normal-link";
 
 const Copyright = () => {
   return (
     <div className="flex flex-col items-center">
-      <p className="text-primary">
+      <p>
         {"Copyright ©"}
-        <NormalLink href="https://dwk.ro/?page=Home&lang=RO">
-          DWK
+        <NormalLink href="https://github.com/andreishark">
+          Andrei
+        </NormalLink>{" "}
+      </p>
+      <p>
+      {"Copyright ©"}
+        <NormalLink href="https://github.com/BlueskyBV">
+          Alexandru
+        </NormalLink>{" "}
+      </p>
+      <p>
+      {"Copyright ©"}
+        <NormalLink href="https://github.com/warlockina">
+          Sofia
         </NormalLink>{" "}
         {new Date().getFullYear()}
       </p>
@@ -31,8 +42,8 @@ const ContactInfo = () => {
       <div className="flex flex-col items-start">
         <p>
           Email:{" "}
-          <NormalLink href="mailto:office@minitechnicus.org">
-            office@minitechnicus.org
+          <NormalLink href="mailto:andrei.varlan@saguna.ro">
+            andrei.varlan@saguna.ro
           </NormalLink>
         </p>
         {/* <p> */}
@@ -62,11 +73,6 @@ const SocialMedia = () => {
       <Button variant="ghost" size="icon" asChild>
         <Link href="https://youtube.com/@mini.technicus?si=53Ni5Ua6n4YlKcSI">
           <YoutubeIcon />
-        </Link>
-      </Button>
-      <Button variant="ghost" size="icon" asChild>
-        <Link href="https://www.tiktok.com/@mini.technicus?_t=8qHsQ64FnWK&_r=1">
-          <TiktokIcon />
         </Link>
       </Button>
     </div>
